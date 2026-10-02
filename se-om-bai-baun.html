@@ -1,0 +1,2001 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Se'i Om Bai Baun | Warisan Kuliner NTT</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:75px;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fffaf1;
+    color:#333;
+}
+
+a{
+    text-decoration:none;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    height:68px;
+    background:#073d20;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 5%;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.2);
+}
+
+.logo-nav{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:white;
+    font-family:'Pacifico',cursive;
+    font-size:22px;
+}
+
+.logo-nav img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.nav-menu{
+    display:flex;
+    gap:18px;
+    list-style:none;
+}
+
+.nav-menu a{
+    color:white;
+    font-size:13px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-menu a:hover{
+    color:#ffc126;
+}
+
+.btn-pesan{
+    background:#25D366;
+    color:white;
+    padding:10px 20px;
+    border-radius:30px;
+    font-weight:700;
+    box-shadow:0 5px 15px rgba(37,211,102,.35);
+    transition:.3s;
+}
+
+.btn-pesan:hover{
+    background:#1ebe5d;
+    transform:translateY(-2px);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:680px;
+    padding-top:68px;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(5,48,24,.92),
+        rgba(12,77,37,.82) 45%,
+        rgba(13,74,36,.45) 75%,
+        rgba(0,0,0,.2)
+    ),
+    url("sei-utama.jpg");
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero-container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    min-height:620px;
+    display:grid;
+    grid-template-columns:42% 58%;
+    align-items:center;
+}
+
+.hero-left{
+    display:flex;
+    justify-content:center;
+}
+
+.logo-besar{
+    width:340px;
+    height:340px;
+    background:white;
+    border-radius:50%;
+    padding:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.35),
+    0 0 0 6px rgba(255,167,0,.35);
+}
+
+.logo-besar img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    border-radius:50%;
+}
+
+.hero-right{
+    padding-left:10px;
+}
+
+.welcome{
+    display:inline-block;
+    border:1px solid rgba(255,255,255,.6);
+    background:rgba(10,74,39,.65);
+    padding:8px 25px;
+    border-radius:30px;
+    font-family:'Pacifico',cursive;
+    font-size:20px;
+    margin-bottom:18px;
+}
+
+.hero-title{
+    font-family:'Pacifico',cursive;
+    font-size:clamp(44px,5vw,70px);
+    line-height:1.1;
+    margin-bottom:10px;
+}
+
+.hero-title span{
+    color:#ffc126;
+}
+
+.hero-subtitle{
+    font-family:'Pacifico',cursive;
+    font-size:clamp(24px,3vw,38px);
+    margin-bottom:20px;
+    color:#e8e8e8;
+}
+
+.orange-line{
+    width:200px;
+    height:6px;
+    background:#ffb000;
+    border-radius:20px;
+    margin:15px 0 20px;
+}
+
+.hero-description{
+    font-size:16px;
+    line-height:1.8;
+    max-width:560px;
+    margin-bottom:30px;
+    color:#f4f4f4;
+}
+
+.btn-menu{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:#ff8500;
+    color:white;
+    padding:14px 32px;
+    border-radius:35px;
+    font-weight:700;
+    font-size:16px;
+    box-shadow:0 8px 20px rgba(255,130,0,.4);
+    transition:.3s;
+}
+
+.btn-menu:hover{
+    transform:translateY(-3px);
+    background:#ff7200;
+}
+
+/* ================= FEATURES ================= */
+
+.feature-wrapper{
+    position:relative;
+    z-index:10;
+    margin-top:-50px;
+}
+
+.features{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    background:white;
+    border-radius:22px;
+    padding:25px 30px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    box-shadow:0 12px 35px rgba(0,0,0,.14);
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:10px 15px;
+    border-right:1px solid #e6dfd3;
+}
+
+.feature:last-child{
+    border-right:none;
+}
+
+.feature-icon{
+    width:55px;
+    height:55px;
+    flex-shrink:0;
+    border-radius:50%;
+    background:#ff8500;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+}
+
+.feature h3{
+    color:#174b2a;
+    font-size:16px;
+}
+
+.feature p{
+    color:#607d8b;
+    font-size:13px;
+}
+
+/* ================= SECTION HEADING ================= */
+
+.menu-heading{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.menu-heading small{
+    color:#ff8500;
+    font-family:'Pacifico',cursive;
+    font-size:20px;
+}
+
+.menu-heading h2{
+    color:#063d21;
+    font-family:'Pacifico',cursive;
+    font-size:42px;
+    margin-top:5px;
+}
+
+.heading-decoration{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    margin-top:10px;
+}
+
+.heading-decoration span{
+    width:70px;
+    height:4px;
+    background:#ff8500;
+    border-radius:20px;
+}
+
+/* ================= MENU ================= */
+
+.menu-section{
+    padding:100px 5% 80px;
+    background:
+    radial-gradient(
+        circle at 10% 20%,
+        rgba(125,180,92,.18),
+        transparent 20%
+    ),
+    #fffaf1;
+}
+
+.menu-grid{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.menu-card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.menu-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.16);
+}
+
+.menu-image{
+    height:200px;
+    overflow:hidden;
+}
+
+.menu-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.menu-card:hover img{
+    transform:scale(1.08);
+}
+
+.menu-info{
+    padding:18px;
+}
+
+.menu-info h3{
+    color:#174b2a;
+    font-size:18px;
+    margin-bottom:6px;
+}
+
+.menu-info p{
+    color:#777;
+    font-size:13px;
+    line-height:1.6;
+}
+
+.menu-info strong{
+    display:block;
+    color:#ff8500;
+    font-size:16px;
+    margin-top:12px;
+    line-height:1.7;
+}
+
+/* ================= PROFIL ================= */
+
+.profil{
+    padding:90px 7%;
+    background:white;
+}
+
+.profil-container{
+    max-width:950px;
+    margin:auto;
+}
+
+.profil-title{
+    text-align:center;
+    color:#174b2a;
+    font-family:'Pacifico',cursive;
+    font-size:38px;
+    margin-bottom:30px;
+}
+
+.foto-pemilik{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin:10px 0 35px;
+}
+
+.foto-pemilik img{
+    width:260px;
+    height:300px;
+    object-fit:cover;
+    border-radius:18px;
+    border:5px solid #81c784;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.foto-pemilik img:hover{
+    transform:translateY(-5px);
+}
+
+.profil-card{
+    background:#f7fff7;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    border-left:6px solid #2e7d32;
+}
+
+.profil-card h3{
+    color:#8b4513;
+    margin:25px 0 10px;
+    font-size:20px;
+}
+
+.profil-card h3:first-child{
+    margin-top:0;
+}
+
+.profil-card p{
+    text-align:justify;
+    color:#555;
+    margin-bottom:15px;
+    font-size:16px;
+    line-height:1.9;
+}
+
+.kutipan{
+    background:#e8f5e9;
+    color:#145a2b;
+    text-align:center;
+    padding:25px;
+    border-radius:15px;
+    margin:30px 0;
+    font-family:'Pacifico',cursive;
+    font-size:22px;
+    line-height:1.6;
+}
+
+.galeri-menu-profil{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-top:40px;
+}
+
+.menu-item-profil{
+    text-align:center;
+}
+
+.menu-item-profil img{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #81c784;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.menu-item-profil h4{
+    color:#2e7d32;
+    font-size:17px;
+    margin-top:10px;
+}
+
+.menu-item-profil p{
+    font-size:13px;
+    color:#666;
+}
+
+/* ================= GALERI ================= */
+
+.galeri-section{
+    padding:100px 5% 80px;
+    background:#fffaf1;
+}
+
+/* ================= VIDEO ================= */
+
+.video-section{
+    padding:90px 5%;
+    background:#fffaf1;
+}
+
+.video-container{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+}
+
+.video-card{
+    background:white;
+    padding:20px;
+    border-radius:22px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.video-wrapper{
+    width:100%;
+    border-radius:16px;
+    overflow:hidden;
+    background:#000;
+}
+
+.video-wrapper video{
+    width:100%;
+    display:block;
+    max-height:600px;
+}
+
+.video-description{
+    padding:25px 10px 10px;
+    text-align:center;
+}
+
+.video-description h3{
+    color:#174b2a;
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.video-description p{
+    color:#666;
+    line-height:1.8;
+}
+
+/* ================= LOKASI ================= */
+
+.lokasi{
+    padding:90px 5%;
+    background:#f7fff7;
+}
+
+.lokasi h2{
+    text-align:center;
+    color:#174b2a;
+    font-family:'Pacifico',cursive;
+    font-size:36px;
+    margin-bottom:30px;
+}
+
+.lokasi-card{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.lokasi-card h3{
+    color:#174b2a;
+    margin-bottom:10px;
+}
+
+.lokasi-card p{
+    color:#666;
+    line-height:1.8;
+}
+
+.btn-lokasi{
+    display:inline-block;
+    margin-top:20px;
+    background:#ff8500;
+    color:white;
+    padding:13px 25px;
+    border-radius:30px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-lokasi:hover{
+    background:#ff7200;
+    transform:translateY(-2px);
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+    padding:90px 20px;
+    text-align:center;
+    background:
+    linear-gradient(
+        135deg,
+        #075e54,
+        #128c7e,
+        #25d366
+    );
+    color:white;
+}
+
+.whatsapp h2{
+    font-family:'Pacifico',cursive;
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.whatsapp p{
+    font-size:17px;
+    margin-bottom:12px;
+}
+
+.btn-whatsapp{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-top:20px;
+    background:white;
+    color:#128c7e;
+    padding:15px 30px;
+    border-radius:35px;
+    font-weight:800;
+    font-size:17px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.btn-whatsapp:hover{
+    transform:translateY(-3px);
+    background:#f5f5f5;
+}
+
+/* ================= LAPORAN ================= */
+
+.laporan{
+    padding:90px 5%;
+    background:white;
+}
+
+.laporan-container{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+}
+
+.laporan-card{
+    background:#f7fff7;
+    border-radius:20px;
+    padding:35px;
+    border-left:6px solid #2e7d32;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.laporan-item{
+    margin-bottom:30px;
+}
+
+.laporan-item:last-child{
+    margin-bottom:0;
+}
+
+.laporan-item h3{
+    color:#174b2a;
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.laporan-item p{
+    color:#555;
+    font-size:15px;
+    line-height:1.9;
+    text-align:justify;
+    margin-bottom:12px;
+}
+
+.laporan-item ul{
+    padding-left:25px;
+    color:#555;
+    line-height:1.9;
+}
+
+.laporan-item li{
+    margin-bottom:7px;
+}
+
+.laporan-highlight{
+    margin-top:25px;
+    padding:20px;
+    background:#e8f5e9;
+    border-radius:15px;
+    color:#145a2b;
+    line-height:1.8;
+}
+
+/* ================= UPLOAD PDF ================= */
+
+.upload-box{
+    margin-top:40px;
+    padding:30px;
+    background:white;
+    border:2px dashed #2e7d32;
+    border-radius:20px;
+    text-align:center;
+}
+
+.upload-box h3{
+    color:#174b2a;
+    margin-bottom:10px;
+    font-size:23px;
+}
+
+.upload-box p{
+    text-align:center;
+    color:#666;
+    margin-bottom:20px;
+}
+
+.pdf-input{
+    display:none;
+}
+
+.upload-label{
+    display:inline-block;
+    background:#2e7d32;
+    color:white;
+    padding:13px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:700;
+    transition:.3s;
+}
+
+.upload-label:hover{
+    background:#1b5e20;
+    transform:translateY(-2px);
+}
+
+.pdf-name{
+    margin-top:20px;
+    color:#174b2a;
+    font-weight:600;
+}
+
+.pdf-preview{
+    display:none;
+    margin-top:25px;
+}
+
+.pdf-preview iframe{
+    width:100%;
+    height:600px;
+    border:none;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+}
+
+.open-pdf{
+    display:inline-block;
+    margin-top:15px;
+    background:#ff8500;
+    color:white;
+    padding:12px 25px;
+    border-radius:25px;
+    font-weight:700;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    background:#032c17;
+    color:white;
+    text-align:center;
+    padding:25px 20px;
+    line-height:1.8;
+}
+
+.footer strong{
+    color:#ffb52a;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px){
+
+    .nav-menu{
+        gap:10px;
+    }
+
+    .hero-container{
+        grid-template-columns:40% 60%;
+    }
+
+    .logo-besar{
+        width:280px;
+        height:280px;
+    }
+
+    .menu-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        padding:0 15px;
+    }
+
+    .nav-menu{
+        display:none;
+    }
+
+    .hero-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero-left{
+        padding-top:20px;
+    }
+
+    .logo-besar{
+        width:240px;
+        height:240px;
+    }
+
+    .orange-line{
+        margin:15px auto;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .feature{
+        border-right:none;
+        border-bottom:1px solid #e6dfd3;
+    }
+
+    .feature:last-child{
+        border-bottom:none;
+    }
+
+    .menu-grid{
+        grid-template-columns:1fr;
+    }
+
+    .profil-card{
+        padding:25px;
+    }
+
+    .galeri-menu-profil{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .foto-pemilik img{
+        width:220px;
+        height:260px;
+    }
+
+    .laporan-card{
+        padding:25px;
+    }
+
+    .video-container,
+    .laporan-container{
+        width:100%;
+    }
+
+    .pdf-preview iframe{
+        height:450px;
+    }
+}
+
+@media(max-width:480px){
+
+    .btn-pesan{
+        display:none;
+    }
+
+    .logo-nav{
+        font-size:18px;
+    }
+
+    .logo-besar{
+        width:200px;
+        height:200px;
+    }
+
+    .hero-title{
+        font-size:40px;
+    }
+
+    .hero-subtitle{
+        font-size:25px;
+    }
+
+    .profil-title{
+        font-size:30px;
+    }
+
+    .foto-pemilik img{
+        width:200px;
+        height:240px;
+    }
+
+    .menu-heading h2{
+        font-size:32px;
+    }
+
+    .whatsapp h2{
+        font-size:32px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+<a href="#beranda" class="logo-nav">
+
+<img src="logo se'i om bai baun.jpg"
+     alt="Logo Se'i Om Bai Baun">
+
+Se'i Om Bai Baun
+
+</a>
+
+<ul class="nav-menu">
+
+<li><a href="#beranda">🏠 Beranda</a></li>
+<li><a href="#profil">👤 Profil</a></li>
+<li><a href="#menu">🍴 Menu</a></li>
+<li><a href="#galeri">🖼️ Galeri</a></li>
+<li><a href="#video">🎥 Video</a></li>
+<li><a href="#lokasi">📍 Lokasi</a></li>
+<li><a href="#whatsapp">💬 WhatsApp</a></li>
+<li><a href="#laporan">📋 Laporan</a></li>
+
+</ul>
+
+<a href="#whatsapp" class="btn-pesan">
+💬 WhatsApp
+</a>
+
+</nav>
+
+
+<!-- ================= BERANDA ================= -->
+
+<section class="hero" id="beranda">
+
+<div class="hero-container">
+
+<div class="hero-left">
+
+<div class="logo-besar">
+
+<img src="logo se'i om bai baun.jpg"
+     alt="Logo Se'i Om Bai Baun">
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="welcome">
+Selamat Datang di
+</div>
+
+<h1 class="hero-title">
+Se'i <span>Om Bai Baun</span>
+</h1>
+
+<h2 class="hero-subtitle">
+Warisan Kuliner Khas NTT
+</h2>
+
+<div class="orange-line"></div>
+
+<p class="hero-description">
+
+Nikmati cita rasa autentik se'i khas Baun
+yang diasap secara tradisional. Daging pilihan,
+rempah asli, dan proses pengasapan alami
+menghasilkan rasa yang lezat, gurih, dan khas
+Nusa Tenggara Timur.
+
+</p>
+
+<a href="#menu" class="btn-menu">
+🍴 Lihat Menu Kami ➜
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FITUR ================= -->
+
+<div class="feature-wrapper">
+
+<div class="features">
+
+<div class="feature">
+
+<div class="feature-icon">🔥</div>
+
+<div>
+
+<h3>Asap Tradisional</h3>
+<p>Proses pengasapan alami</p>
+
+</div>
+
+</div>
+
+<div class="feature">
+
+<div class="feature-icon">🐖</div>
+
+<div>
+
+<h3>Daging Pilihan</h3>
+<p>Kualitas terbaik</p>
+
+</div>
+
+</div>
+
+<div class="feature">
+
+<div class="feature-icon">🌿</div>
+
+<div>
+
+<h3>Rempah Asli</h3>
+<p>Rasa autentik NTT</p>
+
+</div>
+
+</div>
+
+<div class="feature">
+
+<div class="feature-icon">❤️</div>
+
+<div>
+
+<h3>Cita Rasa Khas</h3>
+<p>Gurih dan lezat</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= MENU ================= -->
+
+<section class="menu-section" id="menu">
+
+<div class="menu-heading">
+
+<small>Spesialitas Kami</small>
+
+<h2>Menu Paket & Porsi Satuan</h2>
+
+<div class="heading-decoration">
+<span></span>
+🔥
+<span></span>
+</div>
+
+</div>
+
+<div class="menu-grid">
+
+<div class="menu-card">
+
+<div class="menu-image">
+
+<img src="se'i+nasi.jpg"
+     alt="Nasi Se'i Babi Komplit">
+
+</div>
+
+<div class="menu-info">
+
+<h3>🍚 Nasi Se'i Babi Komplit</h3>
+
+<p>
+Nasi lengkap dengan Se'i Babi,
+Sambal Lu'at khas, sayur daun ubi/
+pepaya, dan sop brenebon atau
+kacang merah.
+</p>
+
+<strong>Rp33.000 - Rp50.000</strong>
+
+</div>
+
+</div>
+
+
+<div class="menu-card">
+
+<div class="menu-image">
+
+<img src="Sambal Lu'at Komplit.jpg"
+     alt="Sambal Lu'at Komplit">
+
+</div>
+
+<div class="menu-info">
+
+<h3>🌶️ Sambal Lu'at Komplit</h3>
+
+<p>
+Paket lengkap dengan Se'i Babi,
+nasi, Sambal Lu'at khas NTT,
+sayur daun ubi/pepaya, dan sop
+brenebon atau kacang merah.
+</p>
+
+<strong>Rp33.000 - Rp50.000</strong>
+
+</div>
+
+</div>
+
+
+<div class="menu-card">
+
+<div class="menu-image">
+
+<img src="Nasi Campur Se'i.jpg"
+     alt="Nasi Campur Se'i">
+
+</div>
+
+<div class="menu-info">
+
+<h3>🍖 Nasi Campur Se'i</h3>
+
+<p>
+Nasi, Se'i Babi, dan sayuran
+khas sebagai pilihan praktis
+tanpa sop.
+</p>
+
+<strong>± Rp45.000</strong>
+
+</div>
+
+</div>
+
+
+<div class="menu-card">
+
+<div class="menu-image">
+
+<img src="sei-utama.jpg"
+     alt="Se'i Babi Kiloan">
+
+</div>
+
+<div class="menu-info">
+
+<h3>🥩 Se'i Babi Kiloan</h3>
+
+<p>
+Se'i Babi pilihan untuk makan
+bersama keluarga, dine-in maupun
+oleh-oleh.
+</p>
+
+<strong>
+1/4 kg: ± Rp75.000<br>
+1/2 kg: Rp125.000 - Rp150.000<br>
+1 kg: Rp250.000 - Rp300.000
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="menu-card">
+
+<div class="menu-image">
+
+<img src="sei-rusuk.jpg"
+     alt="Rusuk Iga Bakar Babi">
+
+</div>
+
+<div class="menu-info">
+
+<h3>🍖 Rusuk / Iga Bakar Babi</h3>
+
+<p>
+Sajian rusuk atau iga bakar
+dengan porsi besar yang cocok
+untuk dinikmati bersama.
+</p>
+
+<strong>Mulai Rp150.000+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROFIL ================= -->
+
+<section class="profil" id="profil">
+
+<div class="profil-container">
+
+<h2 class="profil-title">
+Cerita Perjalanan Om Ba'i
+</h2>
+
+<div class="foto-pemilik"> 
+
+    <img src="foto om bait.jpeg" 
+         alt="Foto Om Ba'i">
+
+</div>
+</div>
+
+<div class="profil-card">
+
+<h3>🌿 Awal Perjalanan</h3>
+
+<p>
+Setiap kesuksesan memiliki perjalanan yang panjang.
+Begitu juga dengan perjalanan Om Ba'i dalam membangun
+usaha kuliner Se'i Om Bai Baun. Perjalanan tersebut
+tidak langsung dimulai dalam keadaan mudah dan serba
+berkecukupan. Ada masa-masa sulit yang harus dilalui
+dengan kesabaran, kerja keras, dan semangat untuk
+terus berusaha.
+</p>
+
+<p>
+Dari keadaan yang sederhana, Om Ba'i mulai menjalani
+kehidupannya dengan penuh perjuangan. Berbagai
+keterbatasan tidak membuatnya berhenti untuk berusaha.
+Justru dari masa-masa sulit tersebut tumbuh keinginan
+untuk membangun kehidupan yang lebih baik melalui
+kerja keras dan usaha yang dijalani dengan sungguh-sungguh.
+</p>
+
+
+<h3>💪 Melewati Masa Sulit</h3>
+
+<p>
+Dalam perjalanan membangun usaha, tentu tidak semua
+berjalan dengan mudah. Om Ba'i harus melewati berbagai
+tantangan dan keterbatasan. Setiap proses menjadi
+pengalaman yang berharga dan mengajarkan pentingnya
+kesabaran, ketekunan, serta keberanian untuk terus
+melangkah.
+</p>
+
+
+<h3>🔥 Mulai Mengembangkan Se'i Om Bai Baun</h3>
+
+<p>
+Seiring berjalannya waktu, usaha tersebut mulai
+berkembang. Se'i yang menjadi bagian dari kuliner khas
+Nusa Tenggara Timur terus diperkenalkan kepada
+masyarakat. Dengan mempertahankan cita rasa dan proses
+pengolahan yang menjadi ciri khasnya, Se'i Om Bai Baun
+mulai mendapatkan perhatian dari masyarakat.
+</p>
+
+
+<h3>📈 Dari Perjuangan Menuju Kesuksesan</h3>
+
+<p>
+Setelah melewati berbagai tantangan, kerja keras yang
+dilakukan mulai memberikan hasil. Usaha yang sebelumnya
+dijalani dengan penuh keterbatasan perlahan berkembang
+dan semakin dikenal. Kepercayaan pelanggan menjadi salah
+satu bagian penting dalam perkembangan Se'i Om Bai Baun.
+</p>
+
+
+<h3>🏆 Masa Jaya Se'i Om Bai Baun</h3>
+
+<p>
+Kini, Se'i Om Bai Baun telah menjadi bagian dari
+perjalanan kuliner yang terus berkembang. Apa yang
+terlihat sekarang merupakan hasil dari proses panjang
+yang telah dilalui sejak masa-masa sulit.
+</p>
+
+
+<h3>❤️ Bukan Hanya Tentang Se'i</h3>
+
+<p>
+Bagi Om Ba'i, perjalanan ini bukan hanya tentang
+membangun sebuah usaha kuliner. Di dalamnya terdapat
+cerita tentang perjuangan, keluarga, kerja keras,
+pengalaman, dan keinginan untuk mempertahankan cita
+rasa khas Nusa Tenggara Timur.
+</p>
+
+
+<div class="kutipan">
+
+"Kesuksesan hari ini adalah hasil dari
+perjuangan yang tidak berhenti kemarin."
+
+</div>
+
+
+<div class="galeri-menu-profil">
+
+<div class="menu-item-profil">
+
+<img src="se'i+nasi JPG File (.jpg)"
+     alt="Se'i Om Bai Baun">
+
+<h4>Se'i Om Bai Baun</h4>
+<p>Cita rasa khas NTT</p>
+
+</div>
+
+
+<div class="menu-item-profil">
+
+<img src="sei-daging.JPG File (.jpg)"
+     alt="Se'i Daging">
+
+<h4>Se'i Daging</h4>
+<p>Cita rasa khas</p>
+
+</div>
+
+
+<div class="menu-item-profil">
+
+<img src="sei-rusuk."
+     alt="Se'i Rusuk">
+
+<h4>Se'i Rusuk</h4>
+<p>Sajian pilihan</p>
+
+</div>
+
+
+<div class="menu-item-profil">
+
+<img src="sambal-luat.jpg"
+     alt="Sambal Lu'at">
+
+<h4>Sambal Lu'at</h4>
+<p>Pelengkap khas NTT</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= GALERI ================= -->
+
+<section class="galeri-section" id="galeri">
+
+<div class="menu-heading">
+
+<small>Dokumentasi</small>
+
+<h2>Galeri</h2>
+
+<div class="heading-decoration">
+<span></span>
+📸
+<span></span>
+</div>
+
+</div>
+
+
+<div class="menu-grid">
+
+<div class="menu-card">
+
+<div class="menu-image">
+
+<img src="sei-utama.jpg"
+     alt="Se'i Om Bai Baun">
+
+</div>
+
+</div>
+
+
+<div class="menu-card">
+
+<div class="menu-image">
+
+<img src="sei-daging.jpg"
+     alt="Se'i Daging">
+
+</div>
+
+</div>
+
+
+<div class="menu-card">
+
+<div class="menu-image">
+
+<img src="sei-rusuk.jpg"
+     alt="Se'i Rusuk">
+
+</div>
+
+</div>
+
+
+<div class="menu-card">
+
+<div class="menu-image">
+
+<img src="se'i + rumpu rampe.jpg"
+     alt="Om Ba'i">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= VIDEO ================= -->
+
+<section class="video-section" id="video">
+
+<div class="menu-heading">
+
+<small>Dokumentasi</small>
+
+<h2>Video Se'i Om Bai Baun</h2>
+
+<div class="heading-decoration">
+<span></span>
+🎥
+<span></span>
+</div>
+
+</div>
+
+
+<div class="video-container">
+
+<div class="video-card">
+
+<div class="video-wrapper">
+
+<video controls poster="sei-utama.jpg">
+
+<source src="vidio se'i om bai.mp4"
+        type="video/mp4">
+        
+
+Browser Anda tidak mendukung pemutar video HTML5.
+
+</video>
+
+</div>
+
+
+<div class="video-description">
+
+<h3>
+🎥 Dokumentasi Se'i Om Bai Baun
+</h3>
+
+<p>
+Video ini menampilkan dokumentasi mengenai
+Se'i Om Bai Baun
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= LOKASI ================= -->
+
+<section class="lokasi" id="lokasi">
+
+<h2>📍 Lokasi Kami</h2>
+
+<div class="lokasi-card">
+
+<h3>Se'i Om Bai Baun</h3>
+
+<p>
+Lokasi asli pusat Se'i Babi Baun Om Bai terletak di Desa Teunbaun (Baun), 
+Kecamatan Amarasi Barat, Kabupaten Kupang, Nusa Tenggara Timur. 
+Lokasinya berjarak sekitar 25 kilometer dari pusat Kota Kupang,
+ dengan waktu tempuh sekitar 30 hingga 60 menit menggunakan kendaraan bermotor.
+</p>
+
+<br>
+
+<p>
+Nikmati cita rasa kuliner khas NTT
+dengan suasana dan cerita dari Baun.
+</p>
+
+<!-- LINK GOOGLE MAPS SUDAH DIGANTI -->
+
+<a
+href="https://maps.app.goo.gl/JxJaXLtMY47NLVHg9"
+target="_blank"
+rel="noopener noreferrer"
+class="btn-lokasi">
+
+📍 Buka Google Maps
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================= WHATSAPP ================= -->
+
+<section class="whatsapp" id="whatsapp">
+
+<h2>💬 Hubungi Kami via WhatsApp</h2>
+
+<p>
+Ingin memesan Se'i Om Bai Baun?
+</p>
+
+<p>
+Silakan hubungi kami melalui WhatsApp.
+</p>
+
+<a
+href="https://wa.me/628XXXXXXXXXX?text=Halo%20Se'i%20Om%20Bai%20Baun,%20saya%20ingin%20memesan."
+target="_blank"
+class="btn-whatsapp">
+
+💬 Chat WhatsApp Sekarang
+
+</a>
+
+</section>
+
+
+<!-- ================= LAPORAN ================= -->
+
+<section class="laporan" id="laporan">
+
+<div class="menu-heading">
+
+<small>Dokumentasi Proyek</small>
+
+<h2>Laporan Website</h2>
+
+<div class="heading-decoration">
+<span></span>
+📋
+<span></span>
+</div>
+
+</div>
+
+
+<div class="laporan-container">
+
+<div class="laporan-card">
+
+
+<div class="laporan-item">
+
+<h3>1. Latar Belakang</h3>
+
+<p>
+Se'i merupakan salah satu makanan khas Nusa Tenggara
+Timur yang memiliki cita rasa dan karakteristik
+tersendiri. Salah satu usaha yang memperkenalkan
+kuliner tersebut adalah Se'i Om Bai Baun yang berada
+di Desa Baun, Kecamatan Amarasi Barat, Kabupaten
+Kupang, Nusa Tenggara Timur.
+</p>
+
+<p>
+Perkembangan teknologi informasi memberikan kesempatan
+untuk memperkenalkan kuliner lokal melalui media digital.
+Oleh karena itu, website Se'i Om Bai Baun dibuat sebagai
+media informasi yang menampilkan profil usaha, menu,
+galeri, video dokumentasi, lokasi, serta informasi
+mengenai perjalanan usaha.
+</p>
+
+</div>
+
+
+<div class="laporan-item">
+
+<h3>2. Tujuan</h3>
+
+<ul>
+
+<li>
+Memperkenalkan Se'i Om Bai Baun kepada masyarakat
+melalui media digital.
+</li>
+
+<li>
+Menampilkan informasi mengenai menu dan produk
+yang tersedia.
+</li>
+
+<li>
+Memperkenalkan cerita perjalanan Se'i Om Bai Baun.
+</li>
+
+<li>
+Menampilkan dokumentasi foto dan video.
+</li>
+
+<li>
+Memberikan informasi mengenai lokasi usaha.
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="laporan-item">
+
+<h3>3. Manfaat Website</h3>
+
+<p>
+Website ini dapat menjadi media informasi digital untuk
+memperkenalkan kuliner khas Nusa Tenggara Timur.
+Pengunjung dapat mengetahui informasi mengenai produk,
+sejarah perjalanan usaha, dokumentasi, serta lokasi
+Se'i Om Bai Baun dengan lebih mudah.
+</p>
+
+</div>
+
+
+<div class="laporan-item">
+
+<h3>4. Teknologi yang Digunakan</h3>
+
+<ul>
+
+<li>HTML5 sebagai struktur halaman website.</li>
+
+<li>CSS3 untuk desain dan tampilan website.</li>
+
+<li>Google Fonts untuk penggunaan font Poppins dan Pacifico.</li>
+
+<li>HTML5 Video untuk menampilkan video dokumentasi.</li>
+
+<li>JavaScript untuk fitur upload dan preview PDF.</li>
+
+<li>Browser untuk menjalankan website.</li>
+
+</ul>
+
+</div>
+
+
+<div class="laporan-item">
+
+<h3>5. Fitur Website</h3>
+
+<ul>
+
+<li>Beranda</li>
+<li>Profil Se'i Om Bai Baun</li>
+<li>Daftar Menu</li>
+<li>Galeri Foto</li>
+<li>Video Dokumentasi</li>
+<li>Informasi Lokasi</li>
+<li>WhatsApp</li>
+<li>Laporan Website</li>
+<li>Upload Laporan PDF</li>
+<li>Desain responsif untuk desktop dan mobile</li>
+
+</ul>
+
+</div>
+
+
+<div class="laporan-item">
+
+<h3>6. Hasil Perancangan</h3>
+
+<p>
+Hasil dari perancangan ini adalah sebuah website
+informasi kuliner yang memiliki tampilan modern
+dengan perpaduan warna hijau, putih, dan oranye.
+Website dilengkapi dengan navigasi yang memudahkan
+pengunjung berpindah dari satu bagian ke bagian lainnya.
+</p>
+
+<p>
+Informasi mengenai Se'i Om Bai Baun ditampilkan dalam
+bentuk teks, foto, video, serta informasi lokasi sehingga
+website dapat menjadi media pengenalan kuliner khas NTT
+secara lebih menarik.
+</p>
+
+</div>
+
+
+<div class="laporan-item">
+
+<h3>7. Kesimpulan</h3>
+
+<p>
+Website Se'i Om Bai Baun merupakan media informasi
+digital yang dirancang untuk memperkenalkan kuliner
+khas Nusa Tenggara Timur. Melalui website ini,
+pengunjung dapat memperoleh informasi mengenai profil,
+perjalanan usaha, menu, galeri, video, lokasi, WhatsApp,
+serta laporan website.
+</p>
+
+<div class="laporan-highlight">
+
+<strong>Kesimpulan:</strong><br>
+
+Website dapat menjadi salah satu media digital
+untuk membantu memperkenalkan kuliner lokal sekaligus
+mendukung pengenalan budaya kuliner Nusa Tenggara Timur.
+
+</div>
+
+</div>
+
+
+<div class="laporan-item">
+
+<h3>8. Penutup</h3>
+
+<p>
+Dengan adanya website ini, informasi mengenai Se'i Om Bai
+Baun dapat disajikan secara lebih terstruktur dan menarik.
+Website masih dapat dikembangkan lebih lanjut dengan
+menambahkan fitur pemesanan online, Google Maps, WhatsApp,
+database produk, serta sistem pengelolaan konten.
+</p>
+
+</div>
+
+
+<!-- ================= UPLOAD PDF ================= -->
+
+<div class="upload-box">
+
+    <h3>📄 Laporan PDF</h3>
+
+    <p>
+        Laporan Perancangan Website Se'i Om Bai Baun
+        dapat dibaca langsung melalui halaman website.
+    </p>
+
+    <div class="pdf-container">
+        <iframe
+            src="Laporan perancangan wibsite multimedia klmpk 13.pdf"
+            width="100%"
+            height="600px"
+            style="border: none; border-radius: 15px;">
+        </iframe>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <a
+            href="Laporan perancangan wibsite multimedia klmpk 13.pdf"
+            target="_blank"
+            class="upload-label"
+            style="text-decoration: none; display: inline-block;">
+            📖 Buka PDF
+        </a>
+
+        <a
+            href="Laporan perancangan wibsite multimedia klmpk 13.pdf"
+            download
+            class="upload-label"
+            style="text-decoration: none; display: inline-block;">
+            📥 Download PDF
+        </a>
+    </div>
+
+</div>
+
+📖 Buka PDF di Tab Baru
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<p>
+© 2026
+<strong>Se'i Om Bai Baun</strong>
+</p>
+
+<p>
+Warisan Kuliner Khas NTT
+</p>
+
+<p>
+Desa Baun, Kecamatan Amarasi Barat,
+Kabupaten Kupang, NTT
+</p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+/* ================= UPLOAD PDF ================= */
+
+const pdfUpload = document.getElementById("pdfUpload");
+const pdfName = document.getElementById("pdfName");
+const pdfPreview = document.getElementById("pdfPreview");
+const pdfFrame = document.getElementById("pdfFrame");
+const openPdf = document.getElementById("openPdf");
+
+let pdfURL = null;
+
+pdfUpload.addEventListener("change", function(){
+
+    const file = this.files[0];
+
+    if(!file){
+        return;
+    }
+
+    /* Memastikan file adalah PDF */
+
+    if(file.type !== "application/pdf"){
+
+        alert("Silakan pilih file dalam format PDF.");
+
+        this.value = "";
+        pdfName.innerHTML = "";
+        pdfPreview.style.display = "none";
+
+        return;
+    }
+
+    /* Menghapus URL PDF sebelumnya */
+
+    if(pdfURL){
+        URL.revokeObjectURL(pdfURL);
+    }
+
+    /* Membuat URL sementara */
+
+    pdfURL = URL.createObjectURL(file);
+
+    /* Menampilkan nama file */
+
+    pdfName.innerHTML =
+        "📄 File yang dipilih: <strong>" +
+        file.name +
+        "</strong>";
+
+    /* Menampilkan PDF */
+
+    pdfFrame.src = pdfURL;
+    openPdf.href = pdfURL;
+
+    pdfPreview.style.display = "block";
+
+});
+
+
+/* ================= ANIMASI SCROLL ================= */
+
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(
+
+function(entries){
+
+    entries.forEach(function(entry){
+
+        if(entry.isIntersecting){
+
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+
+        }
+
+    });
+
+},
+
+{
+    threshold:0.05
+});
+
+
+sections.forEach(function(section){
+
+    section.style.opacity = "1";
+    section.style.transform = "translateY(0)";
+    section.style.transition =
+        "opacity .5s ease, transform .5s ease";
+
+    observer.observe(section);
+
+});
+
+</script>
+
+</body>
+</html>
